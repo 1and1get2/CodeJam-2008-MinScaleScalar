@@ -1,3 +1,4 @@
+package permute;
 import java.util.Scanner;
 
 
@@ -21,7 +22,25 @@ public class MinScaleScalar {
 	}
 	private static int[] crossMuti(int f, int[] firstParas, int[] secondParas){
 		int[] results = new int[getFactorial(f)];
+		int[][] allPossibleSecondParas = new int[getFactorial(f)][f];
+		
+/*		for (int i = 0; i < f; i++){
+			for (int j = 0; j < f; j++){
+				resultsOfMuti[i][j] = firstParas[i] * secondParas[j];
+			}
+		}*/
 		return null;
+	}
+	private static int[] getAllPossibleSecondParas(){
+		return null;
+		
+	}
+	private static int doMuti(int f, int[] firstParas, int[] secondParas){
+		int sum = 0;
+		for (int i = 0; i < f; i++){
+			sum += firstParas[i] * secondParas[i];
+		}
+		return sum;
 	}
 	public static int min(int[] args){
 		int min = args[0];
