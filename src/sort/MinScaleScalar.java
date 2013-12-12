@@ -21,8 +21,8 @@ public class MinScaleScalar {
 	
 	
 	public static void main(String[] args) throws IOException{
-//		String fileName = "A-large-practice";
-		String fileName = "A-small-practice";
+		String fileName = "A-large-practice";
+//		String fileName = "A-small-practice";
 		String outPutString;
 		inputFile = new File(fileName + ".in");
 		outputFile = new File(fileName + ".out");
@@ -31,15 +31,16 @@ public class MinScaleScalar {
 		cases = scanner.nextInt();
 		while(++counter <= cases){
 			int paras = scanner.nextInt();
-			int[] firstParas = new int[paras];
-			int[] secondParas = new int[paras];
+			long[] firstParas = new long[paras];
+			long[] secondParas = new long[paras];
 			for (int i = 0; i < paras; i++)
 				firstParas[i] = scanner.nextInt();
 			for (int i = 0; i < paras; i++)
 				secondParas[i] = scanner.nextInt();
 			Arrays.sort(firstParas);
 			Arrays.sort(secondParas);
-			long maxSum = 0, minSum = 0;
+			long maxSum = 0;
+			long minSum = 0;
 			for (int i = 0; i< paras; i++){
 				maxSum += firstParas[i] * secondParas[i];
 				minSum += firstParas[i] * secondParas[paras - 1 - i];
